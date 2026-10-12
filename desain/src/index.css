@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  color: #1b2d27;
+  background: #edf0ec;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(216, 242, 158, .22), transparent 28%),
+    #edf0ec;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.field-wrap {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #e1e6e3;
+  border-radius: 16px;
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.field-wrap:focus-within {
+  border-color: #78958a;
+  box-shadow: 0 0 0 3px rgba(49, 84, 72, .08);
+}
+
+.field-wrap > input,
+.field-wrap > textarea {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 14px 16px;
+  color: #22352e;
+  font-size: 14px;
+}
+
+.field-wrap > textarea {
+  resize: none;
+  line-height: 1.6;
+}
+
+.field-wrap > input::placeholder,
+.field-wrap > textarea::placeholder {
+  color: #b0b9b5;
+}
+
+@media (min-width: 700px) {
+  body {
+    padding-block: 24px;
+  }
+
+  #root > div {
+    border-radius: 32px;
+    overflow: hidden;
+  }
+
+  nav.fixed {
+    bottom: 24px;
+    border-radius: 0 0 32px 32px;
+  }
+}
